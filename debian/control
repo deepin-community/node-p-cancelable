@@ -1,0 +1,27 @@
+Source: node-p-cancelable
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-define-properties <!nocheck>
+ , node-es-abstract <!nocheck>
+ , node-tape <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-p-cancelable
+Vcs-Git: https://salsa.debian.org/js-team/node-p-cancelable.git
+Homepage: https://github.com/sindresorhus/p-cancelable
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-p-cancelable
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Breaks: node-got (<< 11.8.0)
+Description: Create a promise that can be canceled
+ Useful for animation, loading resources, long-running async computations,
+ async iteration, etc.
+ .
+ Node.js is an event-based server-side JavaScript engine.
